@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+<name>etc_megaMotoTest</name>
+<comment></comment>
+<projects></projects>
+<buildSpec>
+<buildCommand>
+<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+<arguments></arguments>
+</buildCommand>
+<buildCommand>
+<name>org.eclipse.cdt.managedbuilder.core.ScannerConfigBuilder</name>
+<triggers>full,incremental,</triggers>
+<arguments></arguments>
+</buildCommand>
+</buildSpec>
+<natures>
+<nature>com.ti.ccstudio.core.ccsNature</nature>
+<nature>org.eclipse.cdt.core.cnature</nature>
+<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+<nature>org.eclipse.cdt.core.ccnature</nature>
+<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+</natures>
+<linkedResources>
+<link>
+<name>MW_c28xx_board.c</name>
+<type>1</type>
+<location>E:/Git/ETC-Development/matlab_code/etc_megaMotoTest/etc_megaMotoTest_ert_rtw/MW_c28xx_board.c</location>
+</link>
+<link>
+<name>MW_c28xx_csl.c</name>
+<type>1</type>
+<location>E:/Git/ETC-Development/matlab_code/etc_megaMotoTest/etc_megaMotoTest_ert_rtw/MW_c28xx_csl.c</location>
+</link>
+<link>
+<name>ert_main.c</name>
+<type>1</type>
+<location>E:/Git/ETC-Development/matlab_code/etc_megaMotoTest/etc_megaMotoTest_ert_rtw/ert_main.c</location>
+</link>
+<link>
+<name>etc_megaMotoTest.c</name>
+<type>1</type>
+<location>E:/Git/ETC-Development/matlab_code/etc_megaMotoTest/etc_megaMotoTest_ert_rtw/etc_megaMotoTest.c</location>
+</link>
+<link>
+<name>c2837xSBoard_Realtime_Support.c</name>
+<type>1</type>
+<location>C:/ProgramData/MATLAB/SupportPackages/R2019b_1/toolbox/target/supportpackages/tic2000/src/c2837xSBoard_Realtime_Support.c</location>
+</link>
+<link>
+<name>F2837xS_CpuTimers.c</name>
+<type>1</type>
+<location>E:/Program Files (x86)/ti/controlSUITE/device_support/F2837xS/v191/F2837xS_common/source/F2837xS_CpuTimers.c</location>
+</link>
+<link>
+<name>F2837xS_DefaultISR.c</name>
+<type>1</type>
+<location>E:/Program Files (x86)/ti/controlSUITE/device_support/F2837xS/v191/F2837xS_common/source/F2837xS_DefaultISR.c</location>
+</link>
+<link>
+<name>F2837xS_GlobalVariableDefs.c</name>
+<type>1</type>
+<location>E:/Program Files (x86)/ti/controlSUITE/device_support/F2837xS/v191/F2837xS_headers/source/F2837xS_GlobalVariableDefs.c</location>
+</link>
+<link>
+<name>F2837xS_PieCtrl.c</name>
+<type>1</type>
+<location>E:/Program Files (x86)/ti/controlSUITE/device_support/F2837xS/v191/F2837xS_common/source/F2837xS_PieCtrl.c</location>
+</link>
+<link>
+<name>F2837xS_PieVect.c</name>
+<type>1</type>
+<location>E:/Program Files (x86)/ti/controlSUITE/device_support/F2837xS/v191/F2837xS_common/source/F2837xS_PieVect.c</location>
+</link>
+<link>
+<name>F2837xS_SysCtrl.c</name>
+<type>1</type>
+<location>E:/Program Files (x86)/ti/controlSUITE/device_support/F2837xS/v191/F2837xS_common/source/F2837xS_SysCtrl.c</location>
+</link>
+<link>
+<name>F2837xS_usDelay.asm</name>
+<type>1</type>
+<location>E:/Program Files (x86)/ti/controlSUITE/device_support/F2837xS/v191/F2837xS_common/source/F2837xS_usDelay.asm</location>
+</link>
+<link>
+<name>F2837xS_CodeStartBranch.asm</name>
+<type>1</type>
+<location>E:/Program Files (x86)/ti/controlSUITE/device_support/F2837xS/v191/F2837xS_common/source/F2837xS_CodeStartBranch.asm</location>
+</link>
+<link>
+<name>F2837xS_Dma.c</name>
+<type>1</type>
+<location>E:/Program Files (x86)/ti/controlSUITE/device_support/F2837xS/v191/F2837xS_common/source/F2837xS_Dma.c</location>
+</link>
+<link>
+<name>F2837xS_Adc.c</name>
+<type>1</type>
+<location>E:/Program Files (x86)/ti/controlSUITE/device_support/F2837xS/v191/F2837xS_common/source/F2837xS_Adc.c</location>
+</link>
+<link>
+<name>F2837xS_Gpio.c</name>
+<type>1</type>
+<location>E:/Program Files (x86)/ti/controlSUITE/device_support/F2837xS/v191/F2837xS_common/source/F2837xS_Gpio.c</location>
+</link>
+<link>
+<name>F2837xS_Emif.c</name>
+<type>1</type>
+<location>E:/Program Files (x86)/ti/controlSUITE/device_support/F2837xS/v191/F2837xS_common/source/F2837xS_Emif.c</location>
+</link>
+<link>
+<name>profiler_Support.c</name>
+<type>1</type>
+<location>C:/ProgramData/MATLAB/SupportPackages/R2019b_1/toolbox/target/supportpackages/tic2000/src/profiler_Support.c</location>
+</link>
+<link>
+<name>c2837xSSchedulerTimer0.c</name>
+<type>1</type>
+<location>C:/ProgramData/MATLAB/SupportPackages/R2019b_1/toolbox/target/supportpackages/tic2000/src/c2837xSSchedulerTimer0.c</location>
+</link>
+<link>
+<name>f28377S.ccxml</name>
+<type>1</type>
+<location>C:/ProgramData/MATLAB/SupportPackages/R2019b_1/toolbox/target/supportpackages/tic2000/CCS_Config/f28377S.ccxml</location>
+</link>
+</linkedResources>
+</projectDescription>
