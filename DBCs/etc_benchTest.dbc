@@ -36,26 +36,16 @@ BS_:
 BU_:
 
 
-BO_ 106 Msg_6: 4 Vector__XXX
- SG_ motorOut2Voltage : 0|32@1+ (0.01,0) [0|0] "V" Vector__XXX
+BO_ 1001 etc_motorControl: 3 Vector__XXX
+ SG_ motorEnable : 16|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ motor2PWM : 8|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ motor1PWM : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
 
-BO_ 105 Msg_5: 4 Vector__XXX
- SG_ motorOut1Voltage : 0|32@1+ (0.01,0) [0|0] "V" Vector__XXX
-
-BO_ 104 Msg_4: 4 Vector__XXX
- SG_ batteryVoltage : 0|32@1+ (0.01,0) [0|0] "V" Vector__XXX
-
-BO_ 103 Msg_3: 4 Vector__XXX
- SG_ motorCurrent : 0|32@1+ (0.01,0) [0|0] "A" Vector__XXX
-
-BO_ 102 Msg_2: 4 Vector__XXX
- SG_ motorEnable : 0|32@1+ (1,0) [0|4294967295] "bool" Vector__XXX
-
-BO_ 101 Msg_1: 4 Vector__XXX
- SG_ motor1PWM : 0|32@1+ (1,0) [0|4294967295] "%" Vector__XXX
-
-BO_ 100 Msg_0: 4 Vector__XXX
- SG_ motor2PWM : 0|32@1+ (1,0) [0|4294967295] "%" Vector__XXX
+BO_ 1000 etc_motorMeasurements: 8 Vector__XXX
+ SG_ motorOut2Voltage : 48|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
+ SG_ motorOut1Voltage : 32|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
+ SG_ motorCurrent : 0|16@1- (0.001,0) [-32.768|32.767] "A" Vector__XXX
+ SG_ batteryVoltage : 16|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
 
 
 
