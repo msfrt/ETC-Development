@@ -36,6 +36,11 @@ BS_:
 BU_:
 
 
+BO_ 1002 etc_motorControlRaw: 3 Vector__XXX
+ SG_ motorEnable_Raw : 16|8@1+ (1,0) [0|255] "bool" Vector__XXX
+ SG_ motor2PWM_Raw : 8|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ motor1PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+
 BO_ 1001 etc_motorControl: 3 Vector__XXX
  SG_ motorEnable : 16|1@1+ (1,0) [0|1] "bool" Vector__XXX
  SG_ motor2PWM : 8|8@1+ (1,0) [0|255] "%" Vector__XXX
