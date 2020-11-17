@@ -36,10 +36,26 @@ BS_:
 BU_:
 
 
-BO_ 1002 etc_motorControlRaw: 3 Vector__XXX
- SG_ motorEnable_Raw : 16|8@1+ (1,0) [0|255] "bool" Vector__XXX
- SG_ motor2PWM_Raw : 8|8@1+ (1,0) [0|255] "%" Vector__XXX
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ motorEnable_Raw : 0|8@1+ (1,0) [0|255] "bool" Vector__XXX
+ SG_ motor2PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
  SG_ motor1PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+
+BO_ 1004 etc_throttlePosition: 4 Vector__XXX
+ SG_ etc_throttlePosition2 : 16|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ etc_throttlePosition1 : 0|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+
+BO_ 1003 etc_adcInRaw2: 8 Vector__XXX
+ SG_ ADC_A7_Raw : 48|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ADC_A6_Raw : 32|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ADC_A5_Raw : 16|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ADC_A4_Raw : 0|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+
+BO_ 1002 etc_adcInRaw1: 8 Vector__XXX
+ SG_ ADC_A3_Raw : 48|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ADC_A2_Raw : 32|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ADC_A1_Raw : 16|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ADC_A0_Raw : 0|16@1+ (1,0) [0|0] "cnt" Vector__XXX
 
 BO_ 1001 etc_motorControl: 3 Vector__XXX
  SG_ motorEnable : 16|1@1+ (1,0) [0|1] "bool" Vector__XXX
@@ -54,6 +70,7 @@ BO_ 1000 etc_motorMeasurements: 8 Vector__XXX
 
 
 
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
 BA_DEF_  "BusType" STRING ;
 BA_DEF_ BU_  "NodeLayerModules" STRING ;
 BA_DEF_ BU_  "ECU" STRING ;
