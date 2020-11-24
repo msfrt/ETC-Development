@@ -41,6 +41,17 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ motor2PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
  SG_ motor1PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
 
+BO_ 1005 etc_c2000AdcRaw: 8 Vector__XXX
+ SG_ C2000_ADC_motorOut2voltage_Raw : 48|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ C2000_ADC_motorOut1voltage_Raw : 32|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ C2000_ADC_motorCurrent_Raw : 0|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ C2000_ADC_batteryVoltage_Raw : 16|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+
+BO_ 1010 etc_modelOutput1: 6 Vector__XXX
+ SG_ model_throttleBladePosition : 0|8@1+ (0.01,0) [0|2.55] "" Vector__XXX
+ SG_ model_motorVoltage : 32|16@1- (0.001,0) [-32.768|32.767] "" Vector__XXX
+ SG_ model_motorCurrent : 16|16@1- (0.001,0) [-32.768|32.767] "" Vector__XXX
+
 BO_ 1004 etc_throttlePosition: 4 Vector__XXX
  SG_ etc_throttlePosition2 : 16|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
  SG_ etc_throttlePosition1 : 0|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
