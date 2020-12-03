@@ -34,12 +34,19 @@ NS_ :
 BS_:
 
 BU_:
+VAL_TABLE_ motorControlModes 2 "Position" 1 "PWM" 0 "Off" ;
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ motorEnable_Raw : 0|8@1+ (1,0) [0|255] "bool" Vector__XXX
  SG_ motor2PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
  SG_ motor1PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+
+BO_ 1006 motorControlData: 8 Vector__XXX
+ SG_ motorCommand : 48|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ motorVelocityError : 32|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
+ SG_ motorVelocity : 16|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
+ SG_ motorPositionError : 0|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
 
 BO_ 1005 etc_c2000AdcRaw: 8 Vector__XXX
  SG_ C2000_ADC_motorOut2voltage_Raw : 48|16@1+ (1,0) [0|0] "cnt" Vector__XXX
@@ -68,8 +75,10 @@ BO_ 1002 etc_adcInRaw1: 8 Vector__XXX
  SG_ ADC_A1_Raw : 16|16@1+ (1,0) [0|0] "cnt" Vector__XXX
  SG_ ADC_A0_Raw : 0|16@1+ (1,0) [0|0] "cnt" Vector__XXX
 
-BO_ 1001 etc_motorControl: 3 Vector__XXX
- SG_ motorEnable : 16|1@1+ (1,0) [0|1] "bool" Vector__XXX
+BO_ 1001 etc_motorControl: 5 Vector__XXX
+ SG_ motorPositionCmd : 24|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ motorControlMode : 16|8@1+ (1,0) [0|255] "bool" Vector__XXX
+ SG_ motorEnable : 32|1@1+ (1,0) [0|1] "bool" Vector__XXX
  SG_ motor2PWM : 8|8@1+ (1,0) [0|255] "%" Vector__XXX
  SG_ motor1PWM : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
 
@@ -96,4 +105,5 @@ BA_DEF_DEF_  "CANoeJitterMax" 0;
 BA_DEF_DEF_  "CANoeJitterMin" 0;
 BA_DEF_DEF_  "CANoeDrift" 0;
 BA_DEF_DEF_  "CANoeStartDelay" 0;
+VAL_ 1001 motorControlMode 2 "Position" 1 "PWM" 0 "Off" ;
 
