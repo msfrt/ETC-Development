@@ -38,54 +38,57 @@ VAL_TABLE_ motorControlModes 2 "Position" 1 "PWM" 0 "Off" ;
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
- SG_ motorEnable_Raw : 0|8@1+ (1,0) [0|255] "bool" Vector__XXX
- SG_ motor2PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
- SG_ motor1PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ ETC_motorEnable_Raw : 0|8@1+ (1,0) [0|255] "bool" Vector__XXX
+ SG_ ETC_motor2PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ ETC_motor1PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
 
-BO_ 1006 motorControlData: 8 Vector__XXX
- SG_ motorCommand : 48|16@1- (1,0) [-32768|32767] "" Vector__XXX
- SG_ motorVelocityError : 32|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
- SG_ motorVelocity : 16|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
- SG_ motorPositionError : 0|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
+BO_ 500 VBOX_cmd1: 2 Vector__XXX
+ SG_ VBOX_throttleCmd : 0|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
 
-BO_ 1005 etc_c2000AdcRaw: 8 Vector__XXX
- SG_ C2000_ADC_motorOut2voltage_Raw : 48|16@1+ (1,0) [0|0] "cnt" Vector__XXX
- SG_ C2000_ADC_motorOut1voltage_Raw : 32|16@1+ (1,0) [0|0] "cnt" Vector__XXX
- SG_ C2000_ADC_motorCurrent_Raw : 0|16@1+ (1,0) [0|0] "cnt" Vector__XXX
- SG_ C2000_ADC_batteryVoltage_Raw : 16|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+BO_ 1002 ETC_motorControlData1: 8 Vector__XXX
+ SG_ ETC_motorCommand : 48|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ ETC_motorVelocityError : 32|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
+ SG_ ETC_motorVelocity : 16|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
+ SG_ ETC_motorPositionError : 0|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
 
-BO_ 1010 etc_modelOutput1: 6 Vector__XXX
- SG_ model_throttleBladePosition : 0|8@1+ (0.01,0) [0|2.55] "" Vector__XXX
- SG_ model_motorVoltage : 32|16@1- (0.001,0) [-32.768|32.767] "" Vector__XXX
- SG_ model_motorCurrent : 16|16@1- (0.001,0) [-32.768|32.767] "" Vector__XXX
+BO_ 1022 ETC_adcRaw3: 8 Vector__XXX
+ SG_ ETC_c2000ADC_motor2voltage_Raw : 48|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ETC_c2000ADC_motor1voltage_Raw : 32|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ETC_c2000ADC_motorCurrent_Raw : 0|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ETC_c2000ADC_batteryVoltage_Raw : 16|16@1+ (1,0) [0|0] "cnt" Vector__XXX
 
-BO_ 1004 etc_throttlePosition: 4 Vector__XXX
- SG_ etc_throttlePosition2 : 16|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
- SG_ etc_throttlePosition1 : 0|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+BO_ 1030 ETC_modelOutput1: 6 Vector__XXX
+ SG_ ETC_modelThrottleBladePosition : 0|8@1+ (0.01,0) [0|2.55] "" Vector__XXX
+ SG_ ETC_modelMotorVoltage : 32|16@1- (0.001,0) [-32.768|32.767] "" Vector__XXX
+ SG_ ETC_modelMotorCurrent : 16|16@1- (0.001,0) [-32.768|32.767] "" Vector__XXX
 
-BO_ 1003 etc_adcInRaw2: 8 Vector__XXX
- SG_ ADC_A7_Raw : 48|16@1+ (1,0) [0|0] "cnt" Vector__XXX
- SG_ ADC_A6_Raw : 32|16@1+ (1,0) [0|0] "cnt" Vector__XXX
- SG_ ADC_A5_Raw : 16|16@1+ (1,0) [0|0] "cnt" Vector__XXX
- SG_ ADC_A4_Raw : 0|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+BO_ 1010 ETC_throttlePosition: 4 Vector__XXX
+ SG_ ETC_throttlePosition2 : 16|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ ETC_throttlePosition1 : 0|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
 
-BO_ 1002 etc_adcInRaw1: 8 Vector__XXX
- SG_ ADC_A3_Raw : 48|16@1+ (1,0) [0|0] "cnt" Vector__XXX
- SG_ ADC_A2_Raw : 32|16@1+ (1,0) [0|0] "cnt" Vector__XXX
- SG_ ADC_A1_Raw : 16|16@1+ (1,0) [0|0] "cnt" Vector__XXX
- SG_ ADC_A0_Raw : 0|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+BO_ 1021 ETC_adcRaw2: 8 Vector__XXX
+ SG_ ETC_extADC_A7_Raw : 48|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ETC_extADC_A6_Raw : 32|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ETC_extADC_A5_Raw : 16|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ETC_extADC_A4_Raw : 0|16@1+ (1,0) [0|0] "cnt" Vector__XXX
 
-BO_ 1001 etc_motorControl: 5 Vector__XXX
- SG_ motorPositionCmd : 24|8@1+ (1,0) [0|255] "%" Vector__XXX
- SG_ motorControlMode : 16|8@1+ (1,0) [0|255] "bool" Vector__XXX
- SG_ motorEnable : 32|1@1+ (1,0) [0|1] "bool" Vector__XXX
- SG_ motor2PWM : 8|8@1+ (1,0) [0|255] "%" Vector__XXX
- SG_ motor1PWM : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+BO_ 1020 ETC_adcRaw1: 8 Vector__XXX
+ SG_ ETC_extADC_A3_Raw : 48|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ETC_extADC_A2_Raw : 32|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ETC_extADC_A1_Raw : 16|16@1+ (1,0) [0|0] "cnt" Vector__XXX
+ SG_ ETC_extADC_A0_Raw : 0|16@1+ (1,0) [0|0] "cnt" Vector__XXX
 
-BO_ 1000 etc_motorMeasurements: 8 Vector__XXX
- SG_ motorOut2Voltage : 48|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
- SG_ motorOut1Voltage : 32|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
- SG_ motorCurrent : 0|16@1- (0.001,0) [-32.768|32.767] "A" Vector__XXX
+BO_ 1001 ETC_motorControl: 5 Vector__XXX
+ SG_ ETC_motorPositionCmd : 24|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ ETC_motorControlMode : 16|8@1+ (1,0) [0|255] "bool" Vector__XXX
+ SG_ ETC_motorEnable : 32|1@1+ (1,0) [0|1] "bool" Vector__XXX
+ SG_ ETC_motor2PWM : 8|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ ETC_motor1PWM : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+
+BO_ 1000 ETC_motorMeasurements: 8 Vector__XXX
+ SG_ ETC_motorOut2Voltage : 48|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
+ SG_ ETC_motorOut1Voltage : 32|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
+ SG_ ETC_motorCurrent : 0|16@1- (0.001,0) [-32.768|32.767] "A" Vector__XXX
  SG_ batteryVoltage : 16|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
 
 
@@ -105,5 +108,5 @@ BA_DEF_DEF_  "CANoeJitterMax" 0;
 BA_DEF_DEF_  "CANoeJitterMin" 0;
 BA_DEF_DEF_  "CANoeDrift" 0;
 BA_DEF_DEF_  "CANoeStartDelay" 0;
-VAL_ 1001 motorControlMode 2 "Position" 1 "PWM" 0 "Off" ;
+VAL_ 1001 ETC_motorControlMode 2 "Position" 1 "PWM" 0 "Off" ;
 
