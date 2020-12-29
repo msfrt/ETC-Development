@@ -1,5 +1,6 @@
 .DS_Store
 *.ini
+
 ~$*.xls*
 
   
@@ -34,3 +35,28 @@ codegen/
 
 # Octave session info
 octave-workspace
+
+/matlab_code/**/*.hex
+/matlab_code/**/*.out
+/matlab_code/**/*.lis
+/matlab_code/**/*.mat
+/matlab_code/**/*.obj
+/matlab_code/**/*.c
+/matlab_code/**/*.h
+/matlab_code/**/*.dmr
+/matlab_code/**/*.mk
+/matlab_code/**/*.txt
+/matlab_code/**/*.bat
+/matlab_code/**/*.map
+/matlab_code/**/*.list
+/matlab_code/**/*.tmw
+/matlab_code/**/*.ccsproject
+/matlab_code/**/*.cproject
+/matlab_code/**/*.project
+/matlab_code/**/*.html
+/matlab_code/**/*.css
+/matlab_code/**/*.js
+/matlab_code/**/*.png
+/matlab_code/**/*.gif
+/matlab_code/**/*.xml
+/matlab_code/etc_benchTest/etc_benchTest_ert_rtw/*.m
