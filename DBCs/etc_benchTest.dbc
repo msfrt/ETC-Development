@@ -43,6 +43,13 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ ETC_motor2PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
  SG_ ETC_motor1PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
 
+BO_ 1003 ETC_motorControlGains: 5 Vector__XXX
+ SG_ ETC_motorVelGainP : 0|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
+ SG_ ETC_motorVelGainI : 8|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
+ SG_ ETC_motorVelGainFeedback : 16|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
+ SG_ ETC_motorPosGainP : 24|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
+ SG_ ETC_motorPosGainI : 32|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
+
 BO_ 500 VBOX_cmd1: 2 Vector__XXX
  SG_ VBOX_throttleCmd : 0|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
 
