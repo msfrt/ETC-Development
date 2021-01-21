@@ -34,6 +34,8 @@ NS_ :
 BS_:
 
 BU_:
+VAL_TABLE_ ETC_subModes 4 "Position Control" 3 "PWM Control" 2 "Calibration" 1 "Normal" 0 "Disabled" ;
+VAL_TABLE_ ETC_modes 3 "Diagnostic" 2 "Run" 1 "Standby" 0 "ESTOP" ;
 VAL_TABLE_ motorControlModes 2 "Position" 1 "PWM" 0 "Off" ;
 VAL_TABLE_ throttlePosInputModes 2 "VectorBox" 1 "CCP" 0 "Disabled" ;
 
@@ -43,7 +45,17 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ ETC_motor2PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
  SG_ ETC_motor1PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
 
-BO_ 1003 ETC_motorControlGains: 5 Vector__XXX
+BO_ 1003 ETC_motorControlData2: 4 Vector__XXX
+ SG_ ETC_motorCommand : 16|16@1- (1,0) [-32768|32767] "" Vector__XXX
+ SG_ ETC_throttlePositionCmd : 0|16@1+ (0.01,0) [0|655.35] "%" Vector__XXX
+
+BO_ 1000 ETC_modes: 4 Vector__XXX
+ SG_ ETC_throttlePosInputMode : 24|8@1+ (1,0) [0|255] "bool" Vector__XXX
+ SG_ ETC_motorControlMode : 16|8@1+ (1,0) [0|255] "bool" Vector__XXX
+ SG_ ETC_subMode : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ETC_mode : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1005 ETC_motorControlGains: 5 Vector__XXX
  SG_ ETC_motorVelGainP : 0|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
  SG_ ETC_motorVelGainI : 8|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
  SG_ ETC_motorVelGainFeedback : 16|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
@@ -53,8 +65,7 @@ BO_ 1003 ETC_motorControlGains: 5 Vector__XXX
 BO_ 500 VBOX_cmd1: 2 Vector__XXX
  SG_ VBOX_throttleCmd : 0|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
 
-BO_ 1002 ETC_motorControlData1: 8 Vector__XXX
- SG_ ETC_motorCommand : 48|16@1- (1,0) [-32768|32767] "" Vector__XXX
+BO_ 1002 ETC_motorControlData1: 6 Vector__XXX
  SG_ ETC_motorVelocityError : 32|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
  SG_ ETC_motorVelocity : 16|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
  SG_ ETC_motorPositionError : 0|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
@@ -86,15 +97,12 @@ BO_ 1020 ETC_adcRaw1: 8 Vector__XXX
  SG_ ETC_extADC_A1_Raw : 16|16@1+ (1,0) [0|0] "cnt" Vector__XXX
  SG_ ETC_extADC_A0_Raw : 0|16@1+ (1,0) [0|0] "cnt" Vector__XXX
 
-BO_ 1001 ETC_motorControl: 6 Vector__XXX
- SG_ ETC_throttlePosInputMode : 32|8@1+ (1,0) [0|255] "bool" Vector__XXX
- SG_ ETC_motorPositionCmd : 24|8@1+ (1,0) [0|255] "%" Vector__XXX
- SG_ ETC_motorControlMode : 16|8@1+ (1,0) [0|255] "bool" Vector__XXX
- SG_ ETC_motorEnable : 40|1@1+ (1,0) [0|1] "bool" Vector__XXX
+BO_ 1001 ETC_motorControl: 3 Vector__XXX
+ SG_ ETC_motorEnable : 16|1@1+ (1,0) [0|1] "bool" Vector__XXX
  SG_ ETC_motor2PWM : 8|8@1+ (1,0) [0|255] "%" Vector__XXX
  SG_ ETC_motor1PWM : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
 
-BO_ 1000 ETC_motorMeasurements: 8 Vector__XXX
+BO_ 1004 ETC_motorMeasurements: 8 Vector__XXX
  SG_ ETC_motorOut2Voltage : 48|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
  SG_ ETC_motorOut1Voltage : 32|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
  SG_ ETC_motorCurrent : 0|16@1- (0.001,0) [-32.768|32.767] "A" Vector__XXX
@@ -117,6 +125,8 @@ BA_DEF_DEF_  "CANoeJitterMax" 0;
 BA_DEF_DEF_  "CANoeJitterMin" 0;
 BA_DEF_DEF_  "CANoeDrift" 0;
 BA_DEF_DEF_  "CANoeStartDelay" 0;
-VAL_ 1001 ETC_throttlePosInputMode 2 "VectorBox" 1 "CCP" 0 "Disabled" ;
-VAL_ 1001 ETC_motorControlMode 2 "Position" 1 "PWM" 0 "Off" ;
+VAL_ 1000 ETC_throttlePosInputMode 2 "VectorBox" 1 "CCP" 0 "Disabled" ;
+VAL_ 1000 ETC_motorControlMode 2 "Position" 1 "PWM" 0 "Off" ;
+VAL_ 1000 ETC_subMode 4 "Position Control" 3 "PWM Control" 2 "Calibration" 1 "Normal" 0 "Disabled" ;
+VAL_ 1000 ETC_mode 3 "Diagnostic" 2 "Run" 1 "Standby" 0 "ESTOP" ;
 
