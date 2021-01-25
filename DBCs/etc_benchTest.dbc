@@ -97,7 +97,7 @@ BO_ 1020 ETC_adcRaw1: 8 Vector__XXX
  SG_ ETC_extADC_A1_Raw : 16|16@1+ (1,0) [0|0] "cnt" Vector__XXX
  SG_ ETC_extADC_A0_Raw : 0|16@1+ (1,0) [0|0] "cnt" Vector__XXX
 
-BO_ 1001 ETC_motorControl: 3 Vector__XXX
+BO_ 1001 ETC_motorControl: 8 Vector__XXX
  SG_ ETC_motorEnable : 16|1@1+ (1,0) [0|1] "bool" Vector__XXX
  SG_ ETC_motor2PWM : 8|8@1+ (1,0) [0|255] "%" Vector__XXX
  SG_ ETC_motor1PWM : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
