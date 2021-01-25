@@ -45,6 +45,12 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ ETC_motor2PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
  SG_ ETC_motor1PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
 
+BO_ 1026 ETC_faultsRaw: 1 Vector__XXX
+ SG_ ETC_subModeFaultRaw_bool : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1025 ETC_faults: 1 Vector__XXX
+ SG_ ETC_subModeFault_bool : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
 BO_ 1003 ETC_motorControlData2: 4 Vector__XXX
  SG_ ETC_motorCommand : 16|16@1- (1,0) [-32768|32767] "" Vector__XXX
  SG_ ETC_throttlePositionCmd : 0|16@1+ (0.01,0) [0|655.35] "%" Vector__XXX
