@@ -8,9 +8,9 @@
  * 
  * Code generation for model "etc_benchTest".
  *
- * Model version              : 1.62
+ * Model version              : 1.65
  * Simulink Coder version : 9.2 (R2019b) 18-Jul-2019
- * C source code generated on : Wed Jan 20 22:37:19 2021
+ * C source code generated on : Fri Jan 22 20:32:32 2021
  * 
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -706,8 +706,8 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */       S8_AnalogInputFiltering
       /* Long identifier        */       "etc_benchTest/Application/ETCControl/InputFiltering/AnalogInputFiltering"
       /begin SUB_GROUP
-        S17_ConvertToThrottlePos1
-        S17_ConvertToThrottlePos2
+        S20_ConvertToThrottlePos1
+        S20_ConvertToThrottlePos2
       /end SUB_GROUP
       /begin REF_CHARACTERISTIC
         motorCurrZero_mV
@@ -718,7 +718,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */       S9_motorControl
       /* Long identifier        */       "etc_benchTest/Application/ETCControl/SystemControl/motorControl"
       /begin SUB_GROUP
-        S29_Position_Control
+        S32_Position_Control
       /end SUB_GROUP
     /end GROUP
     
@@ -732,7 +732,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S17_ConvertToThrottlePos1
+      /* Name                   */       S20_ConvertToThrottlePos1
       /* Long identifier        */       "etc_benchTest/Application/ETCControl/InputFiltering/AnalogInputFiltering/ConvertToThrottlePos1"
       /begin REF_CHARACTERISTIC
         throttlePos1Max_cnt
@@ -741,7 +741,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S17_ConvertToThrottlePos2
+      /* Name                   */       S20_ConvertToThrottlePos2
       /* Long identifier        */       "etc_benchTest/Application/ETCControl/InputFiltering/AnalogInputFiltering/ConvertToThrottlePos2"
       /begin REF_CHARACTERISTIC
         throttlePos2Max_cnt
@@ -750,7 +750,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S29_Position_Control
+      /* Name                   */       S32_Position_Control
       /* Long identifier        */       "etc_benchTest/Application/ETCControl/SystemControl/motorControl/Position Control"
       /begin REF_CHARACTERISTIC
         motorPosGainI
