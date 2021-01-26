@@ -46,9 +46,11 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ ETC_motor1PWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
 
 BO_ 1026 ETC_faultsRaw: 1 Vector__XXX
+ SG_ ETC_lowBattVoltFaultRaw_bool : 1|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ETC_subModeFaultRaw_bool : 0|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1025 ETC_faults: 1 Vector__XXX
+ SG_ ETC_lowBattVoltFault_bool : 1|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ETC_subModeFault_bool : 0|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1003 ETC_motorControlData2: 4 Vector__XXX
