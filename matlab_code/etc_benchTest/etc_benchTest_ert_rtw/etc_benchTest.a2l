@@ -8,9 +8,9 @@
  * 
  * Code generation for model "etc_benchTest".
  *
- * Model version              : 1.67
+ * Model version              : 1.75
  * Simulink Coder version : 9.2 (R2019b) 18-Jul-2019
- * C source code generated on : Sun Jan 24 23:04:53 2021
+ * C source code generated on : Fri Jan 29 20:02:50 2021
  * 
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -226,7 +226,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      etcModeCmd  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c000 
+      /* ECU Address            */      0x0000c2c0 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_etcModes_etcModes 
@@ -239,7 +239,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      etcSubModeCmd  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c001 
+      /* ECU Address            */      0x0000c2c1 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_etcSubModes_etcSubModes 
@@ -249,23 +249,10 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     
     
     /begin CHARACTERISTIC
-      /* Name                   */      motorControlMode  
-      /* Long Identifier        */      ""
-      /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c002 
-      /* Record Layout          */      Scalar_UWORD 
-      /* Maximum Difference     */      0 
-      /* Conversion Method      */      etc_benchTest_CM_motorControlModes_motorControlModes 
-      /* Lower Limit            */      0 
-      /* Upper Limit            */      2
-    /end CHARACTERISTIC
-    
-    
-    /begin CHARACTERISTIC
       /* Name                   */      throttlePosInputMode  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c003 
+      /* ECU Address            */      0x0000c2c2 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_throttlePosInputModes_throttlePosInputMode 
@@ -275,10 +262,23 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     
     
     /begin CHARACTERISTIC
+      /* Name                   */      battVoltFaultThresh_mV  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000c2c3 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      etc_benchTest_CM_uint16_mV 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      20000.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
       /* Name                   */      model_springConstant  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c004 
+      /* ECU Address            */      0x0000c2c4 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_mNM 
@@ -291,7 +291,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      model_springPreload  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c005 
+      /* ECU Address            */      0x0000c2c5 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_mNM 
@@ -304,7 +304,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      motor1PWM  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c006 
+      /* ECU Address            */      0x0000c2c6 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_pct 
@@ -317,7 +317,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      motor2PWM  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c007 
+      /* ECU Address            */      0x0000c2c7 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_pct 
@@ -330,7 +330,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      motorCurrZero_mV  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c008 
+      /* ECU Address            */      0x0000c2c8 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_mV 
@@ -343,7 +343,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      motorPWMFreq  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c009 
+      /* ECU Address            */      0x0000c2c9 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_Hz 
@@ -356,7 +356,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      motorPosCommand_deg  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c00a 
+      /* ECU Address            */      0x0000c2ca 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_cnt 
@@ -369,7 +369,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      motorPosGainI  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c00b 
+      /* ECU Address            */      0x0000c2cb 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_mCount 
@@ -382,7 +382,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      motorPosGainP  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c00c 
+      /* ECU Address            */      0x0000c2cc 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_mCount 
@@ -395,7 +395,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      motorVelGainFeedback  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c00d 
+      /* ECU Address            */      0x0000c2cd 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_mCount 
@@ -408,7 +408,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      motorVelGainI  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c00e 
+      /* ECU Address            */      0x0000c2ce 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_mCount 
@@ -421,7 +421,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      motorVelGainP  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c00f 
+      /* ECU Address            */      0x0000c2cf 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_mCount 
@@ -434,7 +434,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      throttlePos1Max_cnt  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c010 
+      /* ECU Address            */      0x0000c2d0 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_cnt 
@@ -447,7 +447,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      throttlePos1Min_cnt  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c011 
+      /* ECU Address            */      0x0000c2d1 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_cnt 
@@ -460,7 +460,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      throttlePos2Max_cnt  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c012 
+      /* ECU Address            */      0x0000c2d2 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_cnt 
@@ -473,7 +473,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      throttlePos2Min_cnt  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000c013 
+      /* ECU Address            */      0x0000c2d3 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      etc_benchTest_CM_uint16_cnt 
@@ -526,26 +526,6 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     
     
     /begin COMPU_METHOD
-      /* Name of CompuMethod    */      etc_benchTest_CM_motorControlModes_motorControlModes
-      /* Long identifier        */      "Enumerated data type: motorControlModes"
-      /* Conversion Type        */      TAB_VERB
-      /* Format                 */      "%0.6"
-      /* Units                  */      "motorControlModes"
-      /* Conversion Table       */      COMPU_TAB_REF VTAB_FOR_etc_benchTest_CM_motorControlModes_motorControlModes
-    /end COMPU_METHOD
-    
-    /begin COMPU_VTAB
-      /* Name of Table          */      VTAB_FOR_etc_benchTest_CM_motorControlModes_motorControlModes
-      /* Long identifier        */      "Enumerated data type: motorControlModes"
-      /* Conversion Type        */      TAB_VERB
-      /* Number of Elements     */      3
-      /* Table Element          */      0 "motorControlModes_Off"
-      /* Table Element          */      1 "motorControlModes_PWM"
-      /* Table Element          */      2 "motorControlModes_Position"
-    /end COMPU_VTAB
-    
-    
-    /begin COMPU_METHOD
       /* Name of CompuMethod    */      etc_benchTest_CM_throttlePosInputModes_throttlePosInputMode
       /* Long identifier        */      "Enumerated data type: throttlePosInputModes"
       /* Conversion Type        */      TAB_VERB
@@ -566,6 +546,15 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     
     
     /begin COMPU_METHOD
+      /* Name of CompuMethod    */      etc_benchTest_CM_uint16_mV
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      "mV"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
       /* Name of CompuMethod    */      etc_benchTest_CM_uint16_mNM
       /* Long identifier        */      "Q = V"
       /* Conversion Type        */      RAT_FUNC
@@ -580,15 +569,6 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Conversion Type        */      RAT_FUNC
       /* Format                 */      "%5.0"
       /* Units                  */      "pct"
-      /* Coefficients           */      COEFFS 0 1 0 0 0 1
-    /end COMPU_METHOD
-    
-    /begin COMPU_METHOD
-      /* Name of CompuMethod    */      etc_benchTest_CM_uint16_mV
-      /* Long identifier        */      "Q = V"
-      /* Conversion Type        */      RAT_FUNC
-      /* Format                 */      "%5.0"
-      /* Units                  */      "mV"
       /* Coefficients           */      COEFFS 0 1 0 0 0 1
     /end COMPU_METHOD
     
@@ -633,7 +613,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Long identifier        */       "etc_benchTest/Application"
       /begin SUB_GROUP
         S1_ETCControl
-        S1_HardwareInputs
+        S1_HardwareOutputs
       /end SUB_GROUP
     /end GROUP
     
@@ -648,10 +628,10 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S1_HardwareInputs
-      /* Long identifier        */       "etc_benchTest/Application/HardwareInputs"
+      /* Name                   */       S1_HardwareOutputs
+      /* Long identifier        */       "etc_benchTest/Application/HardwareOutputs"
       /begin SUB_GROUP
-        S5_VectorBox
+        S6_HO_AnalogOutputs
       /end SUB_GROUP
     /end GROUP
     
@@ -660,6 +640,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Long identifier        */       "etc_benchTest/Application/ETCControl/DiagnosticManagement"
       /begin SUB_GROUP
         S7_DM_ETBModel
+        S7_DM_SystemDiagnostics
       /end SUB_GROUP
     /end GROUP
     
@@ -675,23 +656,17 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */       S4_SystemControl
       /* Long identifier        */       "etc_benchTest/Application/ETCControl/SystemControl"
       /begin SUB_GROUP
+        S9_modeControl
         S9_motorControl
       /end SUB_GROUP
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S5_VectorBox
-      /* Long identifier        */       "etc_benchTest/Application/HardwareInputs/VectorBox"
-      /begin REF_CHARACTERISTIC
-        etcModeCmd
-        etcSubModeCmd
-        motor1PWM
-        motor2PWM
-        motorControlMode
-        motorPWMFreq
-        motorPosCommand_deg
-        throttlePosInputMode
-      /end REF_CHARACTERISTIC
+      /* Name                   */       S6_HO_AnalogOutputs
+      /* Long identifier        */       "etc_benchTest/Application/HardwareOutputs/HO_AnalogOutputs"
+      /begin SUB_GROUP
+        S171_motorControls
+      /end SUB_GROUP
     /end GROUP
     
     /begin GROUP 
@@ -703,11 +678,19 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
+      /* Name                   */       S7_DM_SystemDiagnostics
+      /* Long identifier        */       "etc_benchTest/Application/ETCControl/DiagnosticManagement/DM_SystemDiagnostics"
+      /begin REF_CHARACTERISTIC
+        battVoltFaultThresh_mV
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
       /* Name                   */       S8_AnalogInputFiltering
       /* Long identifier        */       "etc_benchTest/Application/ETCControl/InputFiltering/AnalogInputFiltering"
       /begin SUB_GROUP
-        S23_ConvertToThrottlePos1
-        S23_ConvertToThrottlePos2
+        S24_ConvertToThrottlePos1
+        S24_ConvertToThrottlePos2
       /end SUB_GROUP
       /begin REF_CHARACTERISTIC
         motorCurrZero_mV
@@ -715,11 +698,34 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
+      /* Name                   */       S9_modeControl
+      /* Long identifier        */       "etc_benchTest/Application/ETCControl/SystemControl/modeControl"
+      /begin REF_CHARACTERISTIC
+        etcModeCmd
+        etcSubModeCmd
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
       /* Name                   */       S9_motorControl
       /* Long identifier        */       "etc_benchTest/Application/ETCControl/SystemControl/motorControl"
       /begin SUB_GROUP
-        S35_Position_Control
+        S36_Position_Control
       /end SUB_GROUP
+      /begin REF_CHARACTERISTIC
+        motor1PWM
+        motor2PWM
+        motorPosCommand_deg
+        throttlePosInputMode
+      /end REF_CHARACTERISTIC
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S171_motorControls
+      /* Long identifier        */       "etc_benchTest/Application/HardwareOutputs/HO_AnalogOutputs/motorControls"
+      /begin REF_CHARACTERISTIC
+        motorPWMFreq
+      /end REF_CHARACTERISTIC
     /end GROUP
     
     /begin GROUP 
@@ -732,7 +738,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S23_ConvertToThrottlePos1
+      /* Name                   */       S24_ConvertToThrottlePos1
       /* Long identifier        */       "etc_benchTest/Application/ETCControl/InputFiltering/AnalogInputFiltering/ConvertToThrottlePos1"
       /begin REF_CHARACTERISTIC
         throttlePos1Max_cnt
@@ -741,7 +747,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S23_ConvertToThrottlePos2
+      /* Name                   */       S24_ConvertToThrottlePos2
       /* Long identifier        */       "etc_benchTest/Application/ETCControl/InputFiltering/AnalogInputFiltering/ConvertToThrottlePos2"
       /begin REF_CHARACTERISTIC
         throttlePos2Max_cnt
@@ -750,7 +756,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S35_Position_Control
+      /* Name                   */       S36_Position_Control
       /* Long identifier        */       "etc_benchTest/Application/ETCControl/SystemControl/motorControl/Position Control"
       /begin REF_CHARACTERISTIC
         motorPosGainI
