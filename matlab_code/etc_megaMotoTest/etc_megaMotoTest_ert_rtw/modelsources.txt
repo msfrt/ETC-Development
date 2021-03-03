@@ -1,2 +1,0 @@
-  etc_megaMotoTest.c
-
