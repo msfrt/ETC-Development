@@ -20,4 +20,7 @@ for i = 1:length(runIDs)
     legendText(i)= string(19+i);
 end
 legend(legendText);
+title("Percentage of Throttle Postion over Time for Different PWM Values");
+xlabel("Time(s)");
+ylabel("Throttle Position (%)");
 hold off;
