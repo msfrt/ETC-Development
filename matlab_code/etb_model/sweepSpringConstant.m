@@ -2,13 +2,13 @@ clear all
 close all
 %open_system('etb_Model_Sweep');
 Simulink.sdi.clear;
-dutyCyclePWM = 40;
+dutyCyclePWM = 27;
 springPreload = 780;
 springConst = 300;
-for i=1:16
-    dutyCycle = 19+i;
+for i=1:26
+    springPreloadValue = (20*(i-1));
     simIn(i) = Simulink.SimulationInput('etb_Model_Sweep');
-    simIn(i) = simIn(i).setVariable('dutyCyclePWM',dutyCycle);
+    simIn(i) = simIn(i).setVariable('springConst',springPreloadValue);
 end
 simOutputs = sim(simIn);
 runIDs = Simulink.sdi.getAllRunIDs();
@@ -20,10 +20,10 @@ for i = 1:length(runIDs)
     signal = getSignalByIndex(Run,6);
     a= signal.Values();
     plot(a);
-    legendText(i)= string(19+i);
+    legendText(i)= string(20*(i-1));
 end
 legend(legendText);
-title("Percentage of Throttle Postion over Time for Different PWM Values");
+title("Percentage of Throttle Postion over Time for Different Spring Constant Values");
 xlabel("Time(s)");
 ylabel("Throttle Position (%)");
 hold off;

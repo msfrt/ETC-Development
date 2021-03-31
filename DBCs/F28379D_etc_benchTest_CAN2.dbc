@@ -73,7 +73,8 @@ BO_ 1003 ETC_motorControlData2: 4 Vector__XXX
  SG_ ETC_motorCommand : 16|16@1- (1,0) [-32768|32767] "" Vector__XXX
  SG_ ETC_throttlePositionCmd : 0|16@1+ (0.01,0) [0|655.35] "%" Vector__XXX
 
-BO_ 110 ETC_modes: 4 Vector__XXX
+BO_ 110 ETC_modes: 6 Vector__XXX
+ SG_ ETC_applicationSampleTime_sec : 32|16@1+ (1E-005,0) [0|0.65535] "" Vector__XXX
  SG_ ETC_throttlePosInputMode : 24|8@1+ (1,0) [0|255] "bool" Vector__XXX
  SG_ ETC_motorControlMode : 16|8@1+ (1,0) [0|255] "bool" Vector__XXX
  SG_ ETC_subMode : 8|8@1+ (1,0) [0|255] "" Vector__XXX

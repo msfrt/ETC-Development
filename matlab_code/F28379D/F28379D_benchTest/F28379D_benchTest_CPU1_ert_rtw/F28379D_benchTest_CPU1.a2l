@@ -8,9 +8,9 @@
  * 
  * Code generation for model "F28379D_benchTest_CPU1".
  *
- * Model version              : 1.77
+ * Model version              : 1.88
  * Simulink Coder version : 9.2 (R2019b) 18-Jul-2019
- * C source code generated on : Fri Mar 26 15:11:30 2021
+ * C source code generated on : Tue Mar 30 23:58:20 2021
  * 
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -222,88 +222,107 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end   RECORD_LAYOUT
     
     
-    
-    /begin MEASUREMENT
-      /* Name                   */      F28379D_benchTest_CPU1_B.ADC
-      /* Long identifier        */      ""
-      /* Data type              */      UWORD
-      /* Conversion method      */      F28379D_benchTest_CPU1_CM_uint16
-      /* Resolution (Not used)  */      0
-      /* Accuracy (Not used)    */      0
-      /* Lower limit            */      0
-      /* Upper limit            */      65535
-      ECU_ADDRESS                       0x
-    /end MEASUREMENT
-    
-    
-    /begin MEASUREMENT
-      /* Name                   */      F28379D_benchTest_CPU1_B.eCANReceive_o2
-      /* Long identifier        */      ""
-      /* Data type              */      UBYTE
-      /* Conversion method      */      F28379D_benchTest_CPU1_CM_uint8
-      /* Resolution (Not used)  */      0
-      /* Accuracy (Not used)    */      0
-      /* Lower limit            */      0
-      /* Upper limit            */      255
-      /* Array Size             */
-      ARRAY_SIZE                        8
-      ECU_ADDRESS                       0x
-    /end MEASUREMENT
+    /begin CHARACTERISTIC
+      /* Name                   */      etcModeCmd  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000e000 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      F28379D_benchTest_CPU1_CM_etcModes_etcModes 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      3
+    /end CHARACTERISTIC
     
     
-    /begin MEASUREMENT
-      /* Name                   */      F28379D_benchTest_CPU1_DW.is_active_c1_c280xlib
-      /* Long identifier        */      ""
-      /* Data type              */      UBYTE
-      /* Conversion method      */      F28379D_benchTest_CPU1_CM_uint8
-      /* Resolution (Not used)  */      0
-      /* Accuracy (Not used)    */      0
-      /* Lower limit            */      0
-      /* Upper limit            */      255
-      ECU_ADDRESS                       0x
-    /end MEASUREMENT
+    /begin CHARACTERISTIC
+      /* Name                   */      etcSubModeCmd  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000e001 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      F28379D_benchTest_CPU1_CM_etcSubModes_etcSubModes 
+      /* Lower Limit            */      0 
+      /* Upper Limit            */      4
+    /end CHARACTERISTIC
     
     
-    /begin MEASUREMENT
-      /* Name                   */      F28379D_benchTest_CPU1_DW.is_active_c28_canblocks_extras
-      /* Long identifier        */      ""
-      /* Data type              */      UBYTE
-      /* Conversion method      */      F28379D_benchTest_CPU1_CM_uint8
-      /* Resolution (Not used)  */      0
-      /* Accuracy (Not used)    */      0
-      /* Lower limit            */      0
-      /* Upper limit            */      255
-      ECU_ADDRESS                       0x
-    /end MEASUREMENT
+    /begin CHARACTERISTIC
+      /* Name                   */      motorAPWM  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000e002 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      F28379D_benchTest_CPU1_CM_uint16_pct 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      100.0
+    /end CHARACTERISTIC
     
     
-    /begin MEASUREMENT
-      /* Name                   */      F28379D_benchTest_CPU1_DW.is_c28_canblocks_extras
-      /* Long identifier        */      ""
-      /* Data type              */      UBYTE
-      /* Conversion method      */      F28379D_benchTest_CPU1_CM_uint8
-      /* Resolution (Not used)  */      0
-      /* Accuracy (Not used)    */      0
-      /* Lower limit            */      0
-      /* Upper limit            */      255
-      ECU_ADDRESS                       0x
-    /end MEASUREMENT
+    /begin CHARACTERISTIC
+      /* Name                   */      motorBPWM  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000e003 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      F28379D_benchTest_CPU1_CM_uint16_pct 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      100.0
+    /end CHARACTERISTIC
+    
     
     /begin COMPU_METHOD
-      /* Name of CompuMethod    */      F28379D_benchTest_CPU1_CM_uint16
+      /* Name of CompuMethod    */      F28379D_benchTest_CPU1_CM_etcModes_etcModes
+      /* Long identifier        */      "Enumerated data type: etcModes"
+      /* Conversion Type        */      TAB_VERB
+      /* Format                 */      "%0.6"
+      /* Units                  */      "etcModes"
+      /* Conversion Table       */      COMPU_TAB_REF VTAB_FOR_F28379D_benchTest_CPU1_CM_etcModes_etcModes
+    /end COMPU_METHOD
+    
+    /begin COMPU_VTAB
+      /* Name of Table          */      VTAB_FOR_F28379D_benchTest_CPU1_CM_etcModes_etcModes
+      /* Long identifier        */      "Enumerated data type: etcModes"
+      /* Conversion Type        */      TAB_VERB
+      /* Number of Elements     */      4
+      /* Table Element          */      0 "etcModes_ESTOP"
+      /* Table Element          */      1 "etcModes_Standby"
+      /* Table Element          */      2 "etcModes_Run"
+      /* Table Element          */      3 "etcModes_Diag"
+    /end COMPU_VTAB
+    
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      F28379D_benchTest_CPU1_CM_etcSubModes_etcSubModes
+      /* Long identifier        */      "Enumerated data type: etcSubModes"
+      /* Conversion Type        */      TAB_VERB
+      /* Format                 */      "%0.6"
+      /* Units                  */      "etcSubModes"
+      /* Conversion Table       */      COMPU_TAB_REF VTAB_FOR_F28379D_benchTest_CPU1_CM_etcSubModes_etcSubModes
+    /end COMPU_METHOD
+    
+    /begin COMPU_VTAB
+      /* Name of Table          */      VTAB_FOR_F28379D_benchTest_CPU1_CM_etcSubModes_etcSubModes
+      /* Long identifier        */      "Enumerated data type: etcSubModes"
+      /* Conversion Type        */      TAB_VERB
+      /* Number of Elements     */      5
+      /* Table Element          */      0 "etcSubModes_Disabled"
+      /* Table Element          */      1 "etcSubModes_Normal"
+      /* Table Element          */      2 "etcSubModes_Calibration"
+      /* Table Element          */      3 "etcSubModes_PWMControl"
+      /* Table Element          */      4 "etcSubModes_PositionControl"
+    /end COMPU_VTAB
+    
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      F28379D_benchTest_CPU1_CM_uint16_pct
       /* Long identifier        */      "Q = V"
       /* Conversion Type        */      RAT_FUNC
       /* Format                 */      "%5.0"
-      /* Units                  */      ""
-      /* Coefficients           */      COEFFS 0 1 0 0 0 1
-    /end COMPU_METHOD
-    
-    /begin COMPU_METHOD
-      /* Name of CompuMethod    */      F28379D_benchTest_CPU1_CM_uint8
-      /* Long identifier        */      "Q = V"
-      /* Conversion Type        */      RAT_FUNC
-      /* Format                 */      "%3.0"
-      /* Units                  */      ""
+      /* Units                  */      "pct"
       /* Coefficients           */      COEFFS 0 1 0 0 0 1
     /end COMPU_METHOD
     
@@ -313,7 +332,6 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Root                    */       ROOT
       /begin SUB_GROUP
         Root_Application
-        Root_CAN_Calibration_Protocol
       /end SUB_GROUP
     /end GROUP
     
@@ -321,63 +339,43 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */       Root_Application
       /* Long identifier        */       "F28379D_benchTest_CPU1/Application"
       /begin SUB_GROUP
-        S1_HardwareInputs
+        S1_ETCControl
       /end SUB_GROUP
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       Root_CAN_Calibration_Protocol
-      /* Long identifier        */       "F28379D_benchTest_CPU1/CAN Calibration Protocol"
+      /* Name                   */       S1_ETCControl
+      /* Long identifier        */       "F28379D_benchTest_CPU1/Application/ETCControl"
       /begin SUB_GROUP
-        S2_DTO_Processing
+        S4_SystemControl
       /end SUB_GROUP
-      /begin REF_MEASUREMENT
-        F28379D_benchTest_CPU1_B.eCANReceive_o2
-      /end REF_MEASUREMENT
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S1_HardwareInputs
-      /* Long identifier        */       "F28379D_benchTest_CPU1/Application/HardwareInputs"
+      /* Name                   */       S4_SystemControl
+      /* Long identifier        */       "F28379D_benchTest_CPU1/Application/ETCControl/SystemControl"
       /begin SUB_GROUP
-        S5_AnalogInputs
+        S9_modeControl
+        S9_motorControl
       /end SUB_GROUP
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S2_DTO_Processing
-      /* Long identifier        */       "F28379D_benchTest_CPU1/CAN Calibration Protocol/DTO Processing"
-      /begin SUB_GROUP
-        S31_CCP
-      /end SUB_GROUP
-      /begin REF_MEASUREMENT
-        F28379D_benchTest_CPU1_DW.is_active_c1_c280xlib
-      /end REF_MEASUREMENT
+      /* Name                   */       S9_modeControl
+      /* Long identifier        */       "F28379D_benchTest_CPU1/Application/ETCControl/SystemControl/modeControl"
+      /begin REF_CHARACTERISTIC
+        etcModeCmd
+        etcSubModeCmd
+      /end REF_CHARACTERISTIC
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S5_AnalogInputs
-      /* Long identifier        */       "F28379D_benchTest_CPU1/Application/HardwareInputs/AnalogInputs"
-      /begin REF_MEASUREMENT
-        F28379D_benchTest_CPU1_B.ADC
-      /end REF_MEASUREMENT
-    /end GROUP
-    
-    /begin GROUP 
-      /* Name                   */       S31_CCP
-      /* Long identifier        */       "F28379D_benchTest_CPU1/CAN Calibration Protocol/DTO Processing/CCP"
-      /begin SUB_GROUP
-        S33_CAN_Calibration_Protocol
-      /end SUB_GROUP
-    /end GROUP
-    
-    /begin GROUP 
-      /* Name                   */       S33_CAN_Calibration_Protocol
-      /* Long identifier        */       "F28379D_benchTest_CPU1/CAN Calibration Protocol/DTO Processing/CCP/CAN Calibration Protocol"
-      /begin REF_MEASUREMENT
-        F28379D_benchTest_CPU1_DW.is_active_c28_canblocks_extras
-        F28379D_benchTest_CPU1_DW.is_c28_canblocks_extras
-      /end REF_MEASUREMENT
+      /* Name                   */       S9_motorControl
+      /* Long identifier        */       "F28379D_benchTest_CPU1/Application/ETCControl/SystemControl/motorControl"
+      /begin REF_CHARACTERISTIC
+        motorAPWM
+        motorBPWM
+      /end REF_CHARACTERISTIC
     /end GROUP
     
     
