@@ -8,9 +8,9 @@
  * 
  * Code generation for model "F28379D_benchTest_CPU1".
  *
- * Model version              : 1.88
+ * Model version              : 1.89
  * Simulink Coder version : 9.2 (R2019b) 18-Jul-2019
- * C source code generated on : Tue Mar 30 23:58:20 2021
+ * C source code generated on : Thu Apr  1 14:26:09 2021
  * 
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -226,7 +226,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      etcModeCmd  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000e000 
+      /* ECU Address            */      0x0000e180 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      F28379D_benchTest_CPU1_CM_etcModes_etcModes 
@@ -239,7 +239,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      etcSubModeCmd  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000e001 
+      /* ECU Address            */      0x0000e181 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      F28379D_benchTest_CPU1_CM_etcSubModes_etcSubModes 
@@ -252,7 +252,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      motorAPWM  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000e002 
+      /* ECU Address            */      0x0000e182 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      F28379D_benchTest_CPU1_CM_uint16_pct 
@@ -265,12 +265,38 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */      motorBPWM  
       /* Long Identifier        */      ""
       /* Type                   */      VALUE 
-      /* ECU Address            */      0x0000e003 
+      /* ECU Address            */      0x0000e183 
       /* Record Layout          */      Scalar_UWORD 
       /* Maximum Difference     */      0 
       /* Conversion Method      */      F28379D_benchTest_CPU1_CM_uint16_pct 
       /* Lower Limit            */      0.0 
       /* Upper Limit            */      100.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      motorEnable  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000e184 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      F28379D_benchTest_CPU1_CM_uint16_boolean 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      1.0
+    /end CHARACTERISTIC
+    
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      motorPWMFreq  
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE 
+      /* ECU Address            */      0x0000e185 
+      /* Record Layout          */      Scalar_UWORD 
+      /* Maximum Difference     */      0 
+      /* Conversion Method      */      F28379D_benchTest_CPU1_CM_uint16_Hz 
+      /* Lower Limit            */      0.0 
+      /* Upper Limit            */      60000.0
     /end CHARACTERISTIC
     
     
@@ -326,6 +352,24 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Coefficients           */      COEFFS 0 1 0 0 0 1
     /end COMPU_METHOD
     
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      F28379D_benchTest_CPU1_CM_uint16_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      "boolean"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      F28379D_benchTest_CPU1_CM_uint16_Hz
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      "Hz"
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
     /begin GROUP 
       /* Name                   */       F28379D_benchTest_CPU1
       /* Long identifier        */       "F28379D_benchTest_CPU1"
@@ -375,6 +419,8 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /begin REF_CHARACTERISTIC
         motorAPWM
         motorBPWM
+        motorEnable
+        motorPWMFreq
       /end REF_CHARACTERISTIC
     /end GROUP
     

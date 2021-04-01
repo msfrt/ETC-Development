@@ -41,9 +41,28 @@ VAL_TABLE_ throttlePosInputModes 2 "VectorBox" 1 "CCP" 0 "Disabled" ;
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ ETC_throttlePosition1_pct_Copy_2 : 0|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ ETC_throttlePosition1_pct_Copy_1 : 0|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
  SG_ ETC_motorDriverEnabled_Raw : 0|8@1+ (1,0) [0|255] "bool" Vector__XXX
  SG_ ETC_motorBPWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
  SG_ ETC_motorAPWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+
+BO_ 134 ETC_analogInputs5: 8 Vector__XXX
+ SG_ ETC_analogInput6_V : 48|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ ETC_analogInput5_V : 32|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ ETC_analogInput4_V : 16|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ ETC_analogInput3_V : 0|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+
+BO_ 133 ETC_analogInputs4: 8 Vector__XXX
+ SG_ ETC_brakePressure2_psi : 16|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ ETC_brakePressure1_psi : 0|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ ETC_analogInput2_V : 48|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ ETC_analogInput1_V : 32|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+
+BO_ 132 ETC_analogInputs3: 6 Vector__XXX
+ SG_ ETC_motorDriverBatteryVoltage_V : 32|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
+ SG_ ETC_controllerBatteryVoltage_V : 16|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
+ SG_ ETC_BSPDOutputVoltage_V : 0|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
 
 BO_ 140 ETC_adcRaw6: 4 Vector__XXX
  SG_ ETC_intlADC_A3_Raw : 16|16@1+ (1,0) [0|0] "cnt" Vector__XXX
@@ -87,9 +106,6 @@ BO_ 1005 ETC_motorControlGains: 5 Vector__XXX
  SG_ ETC_motorPosGainP : 24|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
  SG_ ETC_motorPosGainI : 32|8@1+ (0.1,0) [0|25.5] "" Vector__XXX
 
-BO_ 50 USER_cmd1: 2 Vector__XXX
- SG_ USER_throttleCmd : 0|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
-
 BO_ 1002 ETC_motorControlData1: 6 Vector__XXX
  SG_ ETC_motorVelocityError : 32|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
  SG_ ETC_motorVelocity : 16|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
@@ -106,9 +122,11 @@ BO_ 1030 ETC_modelOutput1: 6 Vector__XXX
  SG_ ETC_modelMotorVoltage : 32|16@1- (0.001,0) [-32.768|32.767] "" Vector__XXX
  SG_ ETC_modelMotorCurrent : 16|16@1- (0.001,0) [-32.768|32.767] "" Vector__XXX
 
-BO_ 1010 ETC_throttlePosition: 4 Vector__XXX
- SG_ ETC_throttlePosition2 : 16|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
- SG_ ETC_throttlePosition1 : 0|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+BO_ 131 ETC_analogInputs2: 8 Vector__XXX
+ SG_ ETC_APPS2_pct : 48|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ ETC_APPS1_pct : 32|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ ETC_throttlePosition2_pct : 16|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ ETC_throttlePosition1_pct : 0|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
 
 BO_ 136 ETC_adcRaw2: 8 Vector__XXX
  SG_ ETC_extADC1_A7_Raw : 48|16@1+ (1,0) [0|0] "cnt" Vector__XXX
@@ -127,11 +145,11 @@ BO_ 111 ETC_motorControl_cmd: 8 Vector__XXX
  SG_ ETC_motorBPWM : 8|8@1+ (1,0) [0|255] "%" Vector__XXX
  SG_ ETC_motorAPWM : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
 
-BO_ 1004 ETC_motorMeasurements: 8 Vector__XXX
- SG_ ETC_motorOutBVoltage : 48|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
- SG_ ETC_motorOutAVoltage : 32|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
- SG_ ETC_motorCurrent : 0|16@1- (0.001,0) [-32.768|32.767] "A" Vector__XXX
- SG_ ETC_batteryVoltage : 16|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
+BO_ 130 ETC_analogInputs1: 8 Vector__XXX
+ SG_ ETC_motorBCurrent_A : 32|16@1- (0.001,0) [-32.768|32.767] "A" Vector__XXX
+ SG_ ETC_motorBVoltage_V : 48|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
+ SG_ ETC_motorAVoltage_V : 16|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
+ SG_ ETC_motorACurrent_A : 0|16@1- (0.001,0) [-32.768|32.767] "A" Vector__XXX
 
 
 
