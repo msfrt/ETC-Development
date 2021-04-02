@@ -41,11 +41,15 @@ VAL_TABLE_ throttlePosInputModes 2 "VectorBox" 1 "CCP" 0 "Disabled" ;
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
- SG_ ETC_throttlePosition1_pct_Copy_2 : 0|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
- SG_ ETC_throttlePosition1_pct_Copy_1 : 0|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
  SG_ ETC_motorDriverEnabled_Raw : 0|8@1+ (1,0) [0|255] "bool" Vector__XXX
  SG_ ETC_motorBPWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
  SG_ ETC_motorAPWM_Raw : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+
+BO_ 141 ETC_temp: 8 Vector__XXX
+ SG_ ETC_motorDriverTemp_V : 48|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ ETC_motorDriverTemp_C : 32|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
+ SG_ ETC_boardTemp_V : 16|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
+ SG_ ETC_boardTemp_C : 0|16@1- (0.01,0) [-327.68|327.67] "" Vector__XXX
 
 BO_ 134 ETC_analogInputs5: 8 Vector__XXX
  SG_ ETC_analogInput6_V : 48|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
