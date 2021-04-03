@@ -122,9 +122,9 @@ BO_ 139 ETC_adcRaw5: 8 Vector__XXX
  SG_ ETC_intlADC_C3_Raw : 48|16@1+ (1,0) [0|0] "cnt" Vector__XXX
 
 BO_ 1030 ETC_modelOutput1: 6 Vector__XXX
- SG_ ETC_modelThrottleBladePosition : 0|8@1+ (0.01,0) [0|2.55] "" Vector__XXX
- SG_ ETC_modelMotorVoltage : 32|16@1- (0.001,0) [-32.768|32.767] "" Vector__XXX
- SG_ ETC_modelMotorCurrent : 16|16@1- (0.001,0) [-32.768|32.767] "" Vector__XXX
+ SG_ ETC_modelThrottleBladePosition : 0|16@1+ (0.01,0) [0|655.35] "pct" Vector__XXX
+ SG_ ETC_modelMotorVoltage : 32|16@1- (0.001,0) [-32.768|32.767] "V" Vector__XXX
+ SG_ ETC_modelMotorCurrent : 16|16@1- (0.001,0) [-32.768|32.767] "A" Vector__XXX
 
 BO_ 131 ETC_analogInputs2: 8 Vector__XXX
  SG_ ETC_APPS2_pct : 48|16@1+ (0.01,0) [0|655.35] "" Vector__XXX
