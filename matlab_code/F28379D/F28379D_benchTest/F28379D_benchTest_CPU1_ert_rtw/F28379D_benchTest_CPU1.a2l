@@ -10,7 +10,7 @@
  *
  * Model version              : 1.91
  * Simulink Coder version : 9.2 (R2019b) 18-Jul-2019
- * C source code generated on : Fri Apr  2 22:10:57 2021
+ * C source code generated on : Fri Apr  2 23:19:46 2021
  * 
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -579,7 +579,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */       S6_HO_AnalogOutputs
       /* Long identifier        */       "F28379D_benchTest_CPU1/Application/HardwareOutputs/HO_AnalogOutputs"
       /begin SUB_GROUP
-        S85_motorControls
+        S87_motorControls
       /end SUB_GROUP
     /end GROUP
     
@@ -594,15 +594,15 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /begin GROUP 
       /* Name                   */       S8_AnalogInputFiltering
       /* Long identifier        */       "F28379D_benchTest_CPU1/Application/ETCControl/InputFiltering/AnalogInputFiltering"
-      /begin SUB_GROUP
-        S21_ConvertToThrottlePos1
-        S21_ConvertToThrottlePos2
-      /end SUB_GROUP
       /begin REF_CHARACTERISTIC
         boardTempTemperatureCal_mC
         boardTempVoltageCal_mV
         motorDriverTempTemperatureCal_mC
         motorDriverTempVoltageCal_mV
+        throttlePos1Max_cnt
+        throttlePos1Min_cnt
+        throttlePos2Max_cnt
+        throttlePos2Min_cnt
       /end REF_CHARACTERISTIC
     /end GROUP
     
@@ -625,7 +625,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S85_motorControls
+      /* Name                   */       S87_motorControls
       /* Long identifier        */       "F28379D_benchTest_CPU1/Application/HardwareOutputs/HO_AnalogOutputs/motorControls"
       /begin REF_CHARACTERISTIC
         motorPWMFreq
@@ -638,24 +638,6 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /begin REF_CHARACTERISTIC
         model_springConstant
         model_springPreload
-      /end REF_CHARACTERISTIC
-    /end GROUP
-    
-    /begin GROUP 
-      /* Name                   */       S21_ConvertToThrottlePos1
-      /* Long identifier        */       "F28379D_benchTest_CPU1/Application/ETCControl/InputFiltering/AnalogInputFiltering/ConvertToThrottlePos1"
-      /begin REF_CHARACTERISTIC
-        throttlePos1Max_cnt
-        throttlePos1Min_cnt
-      /end REF_CHARACTERISTIC
-    /end GROUP
-    
-    /begin GROUP 
-      /* Name                   */       S21_ConvertToThrottlePos2
-      /* Long identifier        */       "F28379D_benchTest_CPU1/Application/ETCControl/InputFiltering/AnalogInputFiltering/ConvertToThrottlePos2"
-      /begin REF_CHARACTERISTIC
-        throttlePos2Max_cnt
-        throttlePos2Min_cnt
       /end REF_CHARACTERISTIC
     /end GROUP
     
