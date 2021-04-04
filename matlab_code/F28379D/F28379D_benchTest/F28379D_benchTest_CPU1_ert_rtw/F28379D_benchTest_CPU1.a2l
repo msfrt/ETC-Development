@@ -10,7 +10,7 @@
  *
  * Model version              : 1.91
  * Simulink Coder version : 9.2 (R2019b) 18-Jul-2019
- * C source code generated on : Sat Apr  3 16:27:30 2021
+ * C source code generated on : Sat Apr  3 22:53:05 2021
  * 
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -699,7 +699,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
       /* Name                   */       S6_HO_AnalogOutputs
       /* Long identifier        */       "F28379D_benchTest_CPU1/Application/HardwareOutputs/HO_AnalogOutputs"
       /begin SUB_GROUP
-        S179_motorControls
+        S180_motorControls
       /end SUB_GROUP
     /end GROUP
     
@@ -750,7 +750,7 @@ ASAP2_VERSION  1 31   /* Version 1.31 */
     /end GROUP
     
     /begin GROUP 
-      /* Name                   */       S179_motorControls
+      /* Name                   */       S180_motorControls
       /* Long identifier        */       "F28379D_benchTest_CPU1/Application/HardwareOutputs/HO_AnalogOutputs/motorControls"
       /begin REF_CHARACTERISTIC
         motorPWMFreq
