@@ -28,7 +28,7 @@ for i = 1:length(runIDs)
     signal = getSignalByIndex(Run,6);
     a= signal.Values();
     plot(a);
-    legendText(i)= i;
+    legendText(i)= string(i);
 end
 %t3(2313:2704) = t3(2313:2074) ;
 plot((t3(2313:2704)- t3(2313)+.06), ETC_throttlePosition1_pct_t3(2313:2704));
