@@ -2,9 +2,9 @@
 close all
 %open_system('etb_Model_Sweep');
 Simulink.sdi.clear;
-dutyCyclePWM = 30;
+dutyCyclePWM = 25;
 springPreload = 780;
-springConst = 30;
+springConst = 300;
 for i=1:26
     springPreloadValue = 480+(20*i);
     simIn(i) = Simulink.SimulationInput('etb_Model_Sweep');
@@ -22,7 +22,7 @@ for i = 1:length(runIDs)
     plot(a);
     legendText(i)= string(480+(20*i));
 end
-plot((t3(2313:2704)- t3(2313)+.06), ETC_throttlePosition1_pct_t3(2313:2704));
+plot((t3(437:826)- t3(437)), ETC_throttlePosition1_pct_t3(437:826));
 legend(legendText);
 title("Percentage of Throttle Postion over Time for Different Spring Preload Torque Values");
 xlabel("Time(s)");

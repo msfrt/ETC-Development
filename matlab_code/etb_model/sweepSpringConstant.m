@@ -3,7 +3,7 @@ close all
 %open_system('etb_Model_Sweep');
 Simulink.sdi.clear;
 dutyCyclePWM = 30;
-springPreload = 780;
+springPreload = 760;
 springConst = 300;
 for i=1:26
     springConstValue = (20*(i-1));
@@ -22,7 +22,7 @@ for i = 1:length(runIDs)
     plot(a);
     legendText(i)= string(20*(i-1));
 end
-plot((t3(2313:2704)- t3(2313)+0.065), ETC_throttlePosition1_pct_t3(2313:2704));
+plot((t3(437:826)- t3(437)), ETC_throttlePosition1_pct_t3(437:826));
 legend(legendText);
 title("Percentage of Throttle Postion over Time for Different Spring Constant Values");
 xlabel("Time(s)");

@@ -1,4 +1,5 @@
 close all
+inputs = matfile('myFile.mat')
 index=1;
 for i= 2:length(ETC_motorAPWM_t2)
        if (ETC_motorAPWM_t2(i)- ETC_motorAPWM_t2(i-1) > 0)
