@@ -8,9 +8,9 @@
  * 
  * Code generation for model "F28379D_benchTest_CPU1".
  *
- * Model version              : 1.91
+ * Model version              : 1.140
  * Simulink Coder version : 9.2 (R2019b) 18-Jul-2019
- * C source code generated on : Sat Apr  3 22:53:05 2021
+ * C source code generated on : Mon Apr 12 23:25:23 2021
  * 
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
