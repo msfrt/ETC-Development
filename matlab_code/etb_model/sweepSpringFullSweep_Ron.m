@@ -1,10 +1,12 @@
 clear all
 close all
-%open_system('etb_Model_Sweep');
+open_system('etb_Model_Sweep');
 load('Recorder_2021-04-01_23-18-08.mat');
 load('inputTimeData.mat');
+
+%% prepare sims
 Simulink.sdi.clear;
-dutyCyclePWM = 30;
+dutyCyclePWM = 25;
 springPreload = 780;
 springConst = 300;
 springPreloadRange = 100;
@@ -30,17 +32,21 @@ for i=1:springConstRange
     %simIn(i) = simIn(i).setVariable('springPreload',springPreloadValue);
     i
 end
+%% run sim
 set_param('etb_Model_Sweep','StopTime',string(inputTimeData(size(inputTimeData,1),1)));
 %set_param('etb_Model_Sweep','FixedStep',string(inputTimeData(3,1)-inputTimeData(2,1)));
-simOutputs = sim(simIn,'ShowSimulationManager','on','ShowProgress','on');
-runIDs = Simulink.sdi.getAllRunIDs();
+simOutputs = simpar(simIn,'ShowSimulationManager','on','ShowProgress','on');
+
+%% convert data
+%runIDs = Simulink.sdi.getAllRunIDs();
 %figure(1);
 %hold on;
 %legendText = single.empty(0,length(runIDs));
-for i = 1:length(runIDs)
-    Run = Simulink.sdi.getRun(runIDs(i));
-    signal = getSignalByIndex(Run,6);
-    a= signal.Values();
+for i = 1:length(simOutputs)
+    %Run = Simulink.sdi.getRun(runIDs(i));
+    %signal = getSignalByIndex(Run,6);
+    %a= signal.Values();
+    a= simOutputs(i).logsout.get('throttleBladePositionPercent').Values
     
     for j = 1:length(a.time())
         if i == 1
