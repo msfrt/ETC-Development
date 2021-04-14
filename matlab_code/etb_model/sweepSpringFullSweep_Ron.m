@@ -1,39 +1,62 @@
-%clear all
+clear all
 close all
 %open_system('etb_Model_Sweep');
+load('Recorder_2021-04-01_23-18-08.mat');
+load('inputTimeData.mat');
 Simulink.sdi.clear;
 dutyCyclePWM = 30;
 springPreload = 780;
 springConst = 300;
-for i=1:21
-    for a=1:21
-        modelNum = (i-1)*10 + a;
-        springConstValue = (140+(i-1));
-        springPreloadValue = 810+(a-1);
-        simIn(modelNum) = Simulink.SimulationInput('etb_Model_Sweep');
+springPreloadRange = 100;
+springConstRange = 100;
+numberOfModels = springPreloadRange * springConstRange;
+simIn(1:numberOfModels) = Simulink.SimulationInput('etb_Model_Sweep');
+simIn(1:numberOfModels) = simIn(1:numberOfModels).setVariable('dutyCyclePWM',dutyCyclePWM);
+simulationData(1,1) = dutyCyclePWM;
+for i=1:springConstRange
+    for a=1:springPreloadRange
+        modelNum = (i-1)*springPreloadRange + a;
+        springConstValue = 10*i;
+        springPreloadValue = 10*a;
+        %simIn(modelNum) = Simulink.SimulationInput('etb_Model_Sweep');
         simIn(modelNum) = simIn(modelNum).setVariable('springConst',springConstValue);
         simIn(modelNum) = simIn(modelNum).setVariable('springPreload',springPreloadValue);
+        
+        simulationData(2,modelNum+1) = springConstValue;
+        simulationData(3,modelNum+1) = springPreloadValue;
     end
     %springPreloadValue = 480+(20*i);
     %simIn(i) = Simulink.SimulationInput('etb_Model_Sweep');
     %simIn(i) = simIn(i).setVariable('springPreload',springPreloadValue);
+    i
 end
-simOutputs = sim(simIn);
+set_param('etb_Model_Sweep','StopTime',string(inputTimeData(size(inputTimeData,1),1)));
+%set_param('etb_Model_Sweep','FixedStep',string(inputTimeData(3,1)-inputTimeData(2,1)));
+simOutputs = sim(simIn,'ShowSimulationManager','on','ShowProgress','on');
 runIDs = Simulink.sdi.getAllRunIDs();
-figure(1);
-hold on;
+%figure(1);
+%hold on;
 %legendText = single.empty(0,length(runIDs));
 for i = 1:length(runIDs)
     Run = Simulink.sdi.getRun(runIDs(i));
     signal = getSignalByIndex(Run,6);
     a= signal.Values();
-    plot(a);
-    legendText(i)= string(i);
+    
+    for j = 1:length(a.time())
+        if i == 1
+            simulationData(j+3,1) = round(a.time(j),3);
+        end
+        simulationData(j+3,i+1) = round(a.data(j),2);
+    end
+    %plot(simulationData(4:end,1),simulationData(4:end,i+1));
+    %legendText(i)= string(i);
 end
 %t3(2313:2704) = t3(2313:2074) ;
-legend(legendText);
-plot((t3(2313:2704)- t3(2313)+.043), ETC_throttlePosition1_pct_t3(2313:2704));
-title("Percentage of Throttle Postion over Time for Different Spring Preload Torque Values");
-xlabel("Time(s)");
-ylabel("Throttle Position (%)");
-hold off;
+%plot((t3(2314:2703)- t3(2314)), ETC_throttlePosition1_pct_t3(2314:2703));
+%legend(legendText);
+%title("Percentage of Throttle Postion over Time for Different Spring Preload Torque Values");
+%xlabel("Time(s)");
+%ylabel("Throttle Position (%)");
+%hold off;
+fileName = join(['simulationData',string(dutyCyclePWM),'.mat'],"")
+save(fileName,'simulationData','inputTimeData');

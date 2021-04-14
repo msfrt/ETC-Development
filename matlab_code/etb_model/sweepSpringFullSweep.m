@@ -8,7 +8,7 @@ springConst = 300;
 for i=1:10
     for a=1:10
         modelNum = (i-1)*10 + a;
-        springConstValue = (20*(i));
+        springConstValue = 100+(20*(i));
         springPreloadValue = 650+(20*a);
         simIn(modelNum) = Simulink.SimulationInput('etb_Model_Sweep');
         simIn(modelNum) = simIn(modelNum).setVariable('springConst',springConstValue);
@@ -28,10 +28,10 @@ for i = 1:length(runIDs)
     signal = getSignalByIndex(Run,6);
     a= signal.Values();
     plot(a);
-    legendText(i)= i;
+    legendText(i)= string(i);
 end
 %t3(2313:2704) = t3(2313:2074) ;
-plot((t3(2313:2704)- t3(2313)+.06), ETC_throttlePosition1_pct_t3(2313:2704));
+plot((t3(2314:2703)- t3(2314)), ETC_throttlePosition1_pct_t3(2314:2703));
 legend(legendText);
 title("Percentage of Throttle Postion over Time for Different Spring Preload Torque Values");
 xlabel("Time(s)");
