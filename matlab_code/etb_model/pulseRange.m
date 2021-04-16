@@ -33,6 +33,15 @@ for i = (2:size(table,2))
         end
     end
 end
+%%
+table2(1,1:size(table,2)) =0
+for i = 1:size(table,1)
+    if (table(i,1) <= 2)
+        table2(i,:) =table(i,:)
+    end
+    i
+end
+
 
 %signalTimeSeries = timeseries(table(:,2:size(table,2)),table(:,1))
 plot(table(2:size(table,1),1),table(2:size(table,1),2:size(table,2)))

@@ -1,7 +1,13 @@
 clc
 %clear all
 %close all
-load('simulationData30.mat');
+fileName = 'simulationData30.mat';
+load(fileName);
+fileName = 'test.mat';
+
+load(fileName,'modInputTimeData');
+inputTimeData = modInputTimeData;
+%load('inputTimeData.mat')
 RMSEdata = 0;
 RMSE = 0;
 avg(1:size(inputTimeData,1)-1,1) = inputTimeData(2:end,1);
@@ -32,4 +38,6 @@ for k = 2:size(simulationData,2)
     RMSE(2,k-1) = simulationData(3,k);
     RMSE(3,k-1) = sqrt(sum(RMSEdata(:,k))/size(RMSEdata,1));
 end
+
+save(fileName,'simulationData','inputTimeData','RMSE','modInputTimeData');
                 
